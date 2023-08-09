@@ -76,6 +76,9 @@ html, body{
 }
 
 #herofooter{
+    width: 100%;
+    position: absolute;
+    bottom: 3%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -85,6 +88,11 @@ html, body{
     color: white;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+#herofooter #iconset{
+    display: flex;
+    gap: 5px;
 }
 
 #herofooter .circle{
