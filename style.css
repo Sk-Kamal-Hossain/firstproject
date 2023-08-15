@@ -109,7 +109,6 @@ html, body{
 #second{
     color: white;
     padding-right: 10vw;
-    padding-top: 200px;
     background-color: black;
     width: 100%;
     height: 100vh;
@@ -178,4 +177,53 @@ html, body{
     padding: 12px 22px;
     border: 1px solid white;
     border-radius: 100px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#subscribe{
+    color: white;
+    padding: 20px 30px;
+    background-color: black;
+    padding-bottom: 7vw;
+
+}
+
+#subscribe h5{
+    text-transform: uppercase;
+    opacity: .6;
+}
+
+#subscribe h3{
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 30px;
+    background-color: black;
+    color: white;
+}
+
+#footerleft{
+    display: flex;
+    gap: 20px;
+}
+
+#footerright{
+    display: flex;
+    gap: 30px;
+}
+
+#footer a{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
 }
