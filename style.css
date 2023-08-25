@@ -88,6 +88,9 @@ html, body{
 }
 
 #chotoheading{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     margin-top: 100px;
     padding-right: 50px;
 }

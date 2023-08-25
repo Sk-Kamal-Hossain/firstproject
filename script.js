@@ -3,10 +3,56 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
+function firstPageAnim(){
+    var tl = gsap.timeline();
+
+    tl.from("#nav", {
+        y: '-10',
+        opacity: 0,
+        duration: 1.5,
+        ease: Expo.easeInOut
+    })
+
+        .to(".boundingelem", {
+            y: 0,
+            ease: Expo.easeInOut,
+            duration: 2,
+            delay: -1,
+            stagger: .2
+        })
+
+        tl.from("#herofooter", {
+            y: '-10',
+            opacity: 0,
+            duration: 1.5,
+            delay: -1,
+            ease: Expo.easeInOut
+        })
+}
+
+function circleCheptaKaro(){
+    // Define default value
+    var xscale = 1;
+    var yscale = 1;
+
+    var xprev = 0;
+    var yprev = 0;
+
+    window.addEventListener("mousemove", function(dets){
+        xprev = dets.clientX;
+        yprev = dets.clientY;
+
+        gsap.utils.clamp(.8, 1.2, dets.clientX - xprev);
+        gsap.utils.clamp(.8, 1.2, dets.clientY - yprev);
+    });
+}
+
 function circleMouseFollower(){
     window.addEventListener("mousemove", function(dets){
         document.querySelector("#minicircle").style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)`;
     })
 }
 
-circleMouseFollower()
+circleMouseFollower();
+firstPageAnim();
+circleCheptaKaro();
